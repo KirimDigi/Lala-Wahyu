@@ -9,6 +9,38 @@
 		.elementor-element-7e488914 .elementor-background-slideshow__slide__image {
 			background-position: center top !important;
 		}
+		
+		/* Force gallery to be a clean grid of equal aspect-ratio items */
+		.elementor-gallery__container {
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr) !important;
+			gap: 10px !important;
+			height: auto !important;
+		}
+		.elementor-gallery__container .e-gallery-item {
+			position: relative !important;
+			width: 100% !important;
+			aspect-ratio: 3 / 4 !important; /* Portrait format looks extremely elegant */
+			margin: 0 !important;
+			display: block !important;
+			transform: none !important;
+			top: auto !important;
+			left: auto !important;
+		}
+		.elementor-gallery__container .e-gallery-image {
+			position: absolute !important;
+			top: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+			background-size: cover !important;
+			background-position: center center !important;
+		}
+		@media (min-width: 768px) {
+			.elementor-gallery__container {
+				grid-template-columns: repeat(5, 1fr) !important; /* 5 columns on desktop fits 10 items perfectly */
+			}
+		}
 	</style>
 	<link rel="icon" href="KirimDigi.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="KirimDigi.ico" type="image/x-icon">
