@@ -9,6 +9,40 @@
 		.elementor-element-7e488914 .elementor-background-slideshow__slide__image {
 			background-position: center top !important;
 		}
+		/* Fix gallery masonry layout gaps by forcing a clean CSS grid */
+		.elementor-gallery__container {
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr) !important;
+			gap: 12px !important;
+			height: auto !important;
+			position: relative !important;
+		}
+		@media (min-width: 768px) {
+			.elementor-gallery__container {
+				grid-template-columns: repeat(3, 1fr) !important;
+			}
+		}
+		@media (min-width: 1024px) {
+			.elementor-gallery__container {
+				grid-template-columns: repeat(4, 1fr) !important;
+			}
+		}
+		.elementor-gallery__container .e-gallery-item {
+			position: relative !important;
+			top: auto !important;
+			left: auto !important;
+			width: 100% !important;
+			height: auto !important;
+			display: block !important;
+			margin: 0 !important;
+		}
+		.elementor-gallery__container .e-gallery-image {
+			width: 100% !important;
+			height: 0 !important;
+			padding-bottom: 135% !important;
+			background-size: cover !important;
+			background-position: center !important;
+		}
 	</style>
 	<link rel="icon" href="KirimDigi.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="KirimDigi.ico" type="image/x-icon">
